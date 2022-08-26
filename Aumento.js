@@ -1,29 +1,33 @@
 var nome,salario
 var aumento = 0;
+
 Perguntar();
 CalcularAumento();
+
+
 function Perguntar(){
     nome = prompt("Digite seu nome: ")
     salario = parseFloat(prompt("Digite seu salario: "))
 }
 function CalcularAumento(valor,porcentagem){
-    if(salario == 0 || salario <= 1.500){
-        aumento = (1.20 * salario) + salario
-        console.log("Seu aumento foi de: ", aumento)
+    if(salario == 0 || salario <= 1500){
+        aumento = (salario * 20/100) + salario
+        console.log(nome , "Sua porcentagem de aumento foi de 20%.", " E o seu aumento foi:", salario , "Para: ", aumento)
         return aumento;
     }
-    else if(salario == 1.501 || salario <= 2.000){
-        aumento = (0.15 * salario) + salario
-        console.log("Seu aumento foi de: ", aumento)
+    else if(salario == 1501 || salario <= 2000){
+        aumento = (salario * 15/100) + salario
+        console.log(nome , "Sua porcentagem de aumento foi de 15%.", " E o seu aumento foi:", salario , "Para: ", aumento)
         return aumento;
     }
-    else if(salario == 2.001 || salario <= 3.000){
-        aumento = (0.10 * salario) + salario
-        console.log("Seu aumento foi de: ", aumento)
+    else if(salario == 2001 || salario <= 3000){
+        aumento = (salario * 10/100) + salario
+        console.log(nome , "Sua porcentagem de aumento foi de 10%.", " E o seu aumento foi:", salario , "Para: ", aumento)
         return aumento;
     }
-    else if(salario >= 3.000){
-        aumento = (0.05 * salario) + salario
+    else if(salario >= 3001){
+        aumento = (salario * 5/100) + salario
+        console.log(nome , "Sua porcentagem de aumento foi de 5%.", " E o seu aumento foi:", salario , "Para: ", aumento)
         console.log("Seu aumento foi de: ", aumento)
         return aumento
     }
