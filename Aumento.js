@@ -1,9 +1,13 @@
 var nome,salario
 var aumento = 0;
+var opcao
+var continuar = true;
 
-Perguntar();
-CalcularAumento();
-
+while(continuar){
+    Perguntar();
+    CalcularAumento();
+    CalcularNovamente();
+}
 
 function Perguntar(){
     nome = prompt("Digite seu nome: ")
@@ -30,5 +34,14 @@ function CalcularAumento(valor,porcentagem){
         console.log(nome , "Sua porcentagem de aumento foi de 5%.", " E o seu aumento foi:", salario , "Para: ", aumento)
         console.log("Seu aumento foi de: ", aumento)
         return aumento
+    }
+}
+function CalcularNovamente(){
+    opcao = prompt("Digite 1 para continuar e 2 para Encerrar: ")
+    if(opcao == 1){
+        continuar = true;
+    }
+    else{
+        continuar = false;
     }
 }
